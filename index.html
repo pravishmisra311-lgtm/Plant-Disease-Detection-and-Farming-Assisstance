@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AgroVision AI — Plant Disease Detection & Farming Assistant</title>
+    <meta name="description" content="AI-powered plant disease detection using TensorFlow.js. Identify crop diseases from leaf images, access farming guides for 18 crops, and discover government agricultural schemes — all running privately in your browser." />
+    <meta name="keywords" content="plant disease detection, TensorFlow.js, farming assistant, agriculture AI, crop diseases, government schemes, PM-KISAN, PlantVillage" />
+    <meta name="author" content="AgroVision AI" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="AgroVision AI — Plant Disease Detection" />
+    <meta property="og:description" content="AI-powered plant disease detection running locally in your browser with TensorFlow.js." />
+    <meta property="og:type" content="website" />
+
+    <!-- Prevent flash of unstyled content for dark mode -->
+    <script>
+      (function() {
+        var saved = localStorage.getItem('agrovision-theme');
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = saved || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
